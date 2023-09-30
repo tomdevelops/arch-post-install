@@ -102,4 +102,5 @@ which,A utility to show the full path of commands
 whois,Intelligent WHOIS client
 wl-clipboard,Command-line copy/paste utilities for Wayland
 wpa_supplicant,A utility providing key negotiation for WPA wireless networks
+ydiff,Colored, incremental, side-by-side diff viewer
 zsh,A very advanced and programmable command interpreter (shell) for UNIX
