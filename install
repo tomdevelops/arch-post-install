@@ -9,7 +9,7 @@ echo
 
 if ! builtin type -p 'yay' >/dev/null 2>&1; then
   CWD=`pwd`
-  echo 'Install yay.'
+  echo '🥣 Installing yay'
   tmpdir="$(command mktemp -d)"
   command cd "${tmpdir}" || return 1
   sudo pacman -Sy --needed --noconfirm base base-devel git
@@ -20,39 +20,37 @@ if ! builtin type -p 'yay' >/dev/null 2>&1; then
 fi
 
 yay --noconfirm
-# cat packages.csv | tail -n +2 | cut -d, -f1 | yay -Sy --noconfirm -
-curl -Lks https://github.com/tomdevelops/dotfiles/blob/main/packages.csv | tail -n +2 | cut -d, -f1 | yay -Sy --noconfirm -
-
+curl -Lks https://raw.githubusercontent.com/tomdevelops/arch-post-install/main/packages.csv | tail -n +2 | cut -d, -f1 | yay -Sy --noconfirm -
 
 # echo 'Configuring dotfiles'
 # if [ "$1" != "ssh" ]
 # then
 #  # Use https instead of ssh
-#  curl -Lks https://github.com/tomdevelops/dotfiles/blob/main/setup | /bin/bash
+#  curl -Lks https://raw.githubusercontent.com/tomdevelops/dotfiles/main/setup | /bin/bash
 #else
-#  curl -Lks https://github.com/tomdevelops/dotfiles/blob/main/setup | /bin/bash -s ssh
+#  curl -Lks https://raw.githubusercontent.com/tomdevelops/dotfiles/main/setup | /bin/bash -s ssh
 #fi
 
 if [ -f /etc/systemd/system/display-manager.service ]
 then
-  echo 'Removing existing display manager link'
+  echo '🔗 Removing existing display manager link'
   sudo rm /etc/systemd/system/display-manager.service
 fi
 
 echo
-echo 'Cleaning up unwanted packages'
+echo '🧹 Cleaning up unwanted packages'
 yay -Qtdq | yay -Rns --noconfirm - 2>/dev/null
 echo
 
 echo
 echo '###################################################'
 echo '##                                               ##'
-echo '##          👋 Installation Complete             ##'
+echo '##          👏 Installation Complete             ##'
 echo '##      reboot to use the new configurations     ##'
 echo '##                                               ##'
 echo '###################################################'
 echo
 
-printf "Would you like to reboot? (y/N)"
+printf "Would you like to reboot now? (y/N)"
 read -r reboot
 [ "$(tr '[:upper:]' '[:lower:]' <<< "$reboot")" = "y" ] && reboot
