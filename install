@@ -19,7 +19,10 @@ if ! builtin type -p 'yay' >/dev/null 2>&1; then
   cd $CWD
 fi
 
+echo '📦 Installing base packages'
 yay --noconfirm
+
+echo '📦 Installing packages'
 curl -Lks https://raw.githubusercontent.com/tomdevelops/arch-post-install/main/packages.csv | tail -n +2 | cut -d, -f1 | yay -Sy --noconfirm -
 
 # echo 'Configuring dotfiles'
@@ -51,6 +54,16 @@ echo '##                                               ##'
 echo '###################################################'
 echo
 
-printf "Would you like to reboot now? (y/N)"
+# clearing the input buffer
+while read -r -t 0; do
+    read -r
+done
+
+printf "Would you like to reboot now? (y/N): "
 read -r reboot
-[ "$(tr '[:upper:]' '[:lower:]' <<< "$reboot")" = "y" ] && reboot
+reboot_lower=$(tr '[:upper:]' '[:lower:]' <<< "$reboot")
+
+if [ "$reboot_lower" = "y" ]; then
+    echo "Rebooting..."
+    reboot
+fi
