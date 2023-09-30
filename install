@@ -40,6 +40,14 @@ yay -Qtdq | yay -Rns --noconfirm - 2>/dev/null
 echo
 
 echo
+echo '🧹 Clear pacman and yay cache'
+yay -Sc --noconfirm - 2>/dev/null
+rm -rf ~/.cache/yay/* - 2>/dev/null
+rm -rf ~/.cache/go-build/* - 2>/dev/null
+sudo rm -rf /var/cache/pacman/pkg/* - 2>/dev/null
+echo
+
+echo
 echo '###################################################'
 echo '##                                               ##'
 echo '##          👏 Installation Complete             ##'
