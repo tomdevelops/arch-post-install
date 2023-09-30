@@ -47,12 +47,3 @@ echo '##      reboot to use the new configurations     ##'
 echo '##                                               ##'
 echo '###################################################'
 echo
-
-printf "Would you like to reboot now? (y/N): "
-read -r reboot
-reboot_lower=$(tr '[:upper:]' '[:lower:]' <<< "$reboot")
-
-if [ "$reboot_lower" = "y" ]; then
-    echo "Rebooting..."
-    reboot
-fi
