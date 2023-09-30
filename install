@@ -54,11 +54,6 @@ echo '##                                               ##'
 echo '###################################################'
 echo
 
-# clearing the input buffer
-while read -r -t 0; do
-    read -r
-done
-
 printf "Would you like to reboot now? (y/N): "
 read -r reboot
 reboot_lower=$(tr '[:upper:]' '[:lower:]' <<< "$reboot")
