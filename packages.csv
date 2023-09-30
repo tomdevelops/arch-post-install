@@ -7,7 +7,6 @@ bash-completion,Programmable completion for the bash shell
 bat,Cat clone with syntax highlighting and git integration
 blender,A fully integrated 3D graphics creation suite
 brightnessctl,Lightweight brightness control tool
-bunjs-bin,"All-in-one JavaScript runtime built for speed, with bundler, transpiler, test runner, and package manager. Includes bunx, shell completions and support for baseline CPUs"
 cmake,A cross-platform open-source make system
 cups,OpenPrinting CUPS - daemon package
 docker,"Pack, ship and run any application as a lightweight container"
