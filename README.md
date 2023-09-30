@@ -11,6 +11,5 @@ The script installs yay and all the packages in the [packages.csv](packages.csv)
 Post arch installation execute the following command with your main user
 
 ```bash
-# download & execute install script
 curl -Lks https://raw.githubusercontent.com/tomdevelops/arch-post-install/main/install | /bin/bash
 ```
