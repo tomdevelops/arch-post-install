@@ -29,10 +29,15 @@ curl -Lks https://raw.githubusercontent.com/tomdevelops/arch-post-install/main/p
 # if [ "$1" != "ssh" ]
 # then
 #  # Use https instead of ssh
-#  curl -Lks https://raw.githubusercontent.com/tomdevelops/dotfiles/main/setup | /bin/bash
+#  curl -Lks https://raw.githubusercontent.com/tomdevelops/dotfiles/arch/setup | /bin/bash
 #else
-#  curl -Lks https://raw.githubusercontent.com/tomdevelops/dotfiles/main/setup | /bin/bash -s ssh
+#  curl -Lks https://raw.githubusercontent.com/tomdevelops/dotfiles/arch/setup | /bin/bash -s ssh
 #fi
+
+echo
+echo '🧹 Cleaning up unwanted packages'
+yay -Qtdq | yay -Rns --noconfirm - 2>/dev/null
+echo
 
 echo
 echo '###################################################'
