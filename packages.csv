@@ -6,11 +6,14 @@ audacity,A program that lets you manipulate digital audio waveforms
 bash-completion,Programmable completion for the bash shell
 bat,Cat clone with syntax highlighting and git integration
 blender,A fully integrated 3D graphics creation suite
+brave-bin,Web browser that blocks ads and trackers by default (binary release)
 brightnessctl,Lightweight brightness control tool
 cmake,A cross-platform open-source make system
 cups,OpenPrinting CUPS - daemon package
+dialog,A tool to display dialog boxes from shell scripts
 docker,"Pack, ship and run any application as a lightweight container"
 docker-compose,"Fast, isolated development environments using Docker"
+dog,Command-line DNS client like dig
 dragon-drop,Simple drag-and-drop source/sink for X or Wayland
 duf,Disk Usage/Free Utility
 extension-manager,"A native tool for browsing, installing, and managing GNOME Shell Extensions"
@@ -28,10 +31,10 @@ gcc,The GNU Compiler Collection - C and C++ frontends
 git,the fast distributed version control system
 git-graph,Git graph cli tool
 git-lfs,Git extension for versioning large files
+google-chrome,The popular web browser by Google (Stable Channel)
 gparted,"A Partition Magic clone, frontend to GNU Parted"
 gradience,"Change the look of Adwaita, with ease"
 grep,A string search utility
-grim,Screenshot utility for Wayland
 gst-libav,Multimedia graph framework - libav plugin
 gst-plugin-pipewire,Multimedia graph framework - pipewire plugin
 gst-plugins-bad,Multimedia graph framework - bad plugins
@@ -41,13 +44,19 @@ hid-apple-patched-git-dkms,Swaping the Fn and left Control keys and some other m
 htop,Interactive process viewer
 hwdetect,Hardware detection script with loading modules and mkinitcpio.conf
 hwinfo,Hardware detection tool from openSUSE
+iputils,Network monitoring tools
+iw,nl80211 based CLI configuration utility for wireless devices
 iwd,Internet Wireless Daemon
 keepassxc,Cross-platform community-driven port of Keepass password manager
+lazydocker-bin,A simple terminal UI for docker and docker-compose
+lazygit-git,A simple terminal UI for git commands
 less,A terminal based program for viewing text files
 make,GNU make utility to maintain groups of programs
 man-db,A utility for reading man pages
 neofetch,A CLI system information tool written in BASH that supports displaying images.
 neovim,Fork of Vim aiming to improve user experience plugins and GUIs
+network-manager-applet,Applet for managing network connections
+networkmanager,Network connection manager and user applications
 nextcloud-client,Nextcloud desktop client
 nftables,Netfilter tables userspace tools
 ninja,Small build system with a focus on speed
@@ -74,6 +83,7 @@ rsync,A fast and versatile file copying tool for remote and local files
 seahorse,GNOME application for managing PGP keys.
 slurp,Select a region in a Wayland compositor
 sqlitebrowser,"SQLite Database browser is a light GUI editor for SQLite databases, built on top of Qt"
+sslscan,A fast tool to scan SSL services such as HTTPS to determine supported ciphers
 swappy,A Wayland native snapshot editing tool
 the_silver_searcher,Code searching tool similar to Ack but faster
 thunderbird,Standalone mail and news reader from mozilla.org
@@ -91,4 +101,5 @@ wget,Network utility to retrieve files from the Web
 which,A utility to show the full path of commands
 whois,Intelligent WHOIS client
 wl-clipboard,Command-line copy/paste utilities for Wayland
+wpa_supplicant,A utility providing key negotiation for WPA wireless networks
 zsh,A very advanced and programmable command interpreter (shell) for UNIX
